@@ -16,10 +16,9 @@ body{
     font-family:Rakkas, serif;
 }
 
-/* Button */
 .spi-button{
-    padding:12px 25px;
-    font-size:20px;
+    padding:15px 30px;
+    font-size:28px;
     font-weight:bold;
     color:#fcfceb;
     background:#0dbd04;
@@ -29,37 +28,48 @@ body{
     text-decoration:none;
     text-align:center;
     box-shadow:0 0 20px rgba(0,0,0,0.3);
-
-    /* Wave Animation */
-    animation:wave 2s ease-in-out infinite;
-
-    transition:all 0.3s ease;
+    white-space:nowrap;
 }
 
-/* Hover Effect */
 .spi-button:hover{
-    transform:scale(1.1);
+    transform:scale(1.05);
 }
 
-/* Wave Effect */
+/* Each character */
+.spi-button span{
+    display:inline-block;
+    animation:wave 1.8s ease-in-out infinite;
+}
+
+/* Staggered delays create the flag effect */
+.spi-button span:nth-child(1){animation-delay:0.0s;}
+.spi-button span:nth-child(2){animation-delay:0.1s;}
+.spi-button span:nth-child(3){animation-delay:0.2s;}
+.spi-button span:nth-child(4){animation-delay:0.3s;}
+.spi-button span:nth-child(5){animation-delay:0.4s;}
+.spi-button span:nth-child(6){animation-delay:0.5s;}
+.spi-button span:nth-child(7){animation-delay:0.6s;}
+.spi-button span:nth-child(8){animation-delay:0.7s;}
+.spi-button span:nth-child(9){animation-delay:0.8s;}
+.spi-button span:nth-child(10){animation-delay:0.9s;}
+.spi-button span:nth-child(11){animation-delay:1.0s;}
+.spi-button span:nth-child(12){animation-delay:1.1s;}
+.spi-button span:nth-child(13){animation-delay:1.2s;}
+.spi-button span:nth-child(14){animation-delay:1.3s;}
+.spi-button span:nth-child(15){animation-delay:1.4s;}
+
 @keyframes wave{
     0%,100%{
-        transform:translateY(0px) rotate(0deg);
+        transform:translateY(0px);
     }
-    15%{
-        transform:translateY(-4px) rotate(2deg);
-    }
-    30%{
-        transform:translateY(-8px) rotate(4deg);
+    25%{
+        transform:translateY(-10px);
     }
     50%{
-        transform:translateY(0px) rotate(0deg);
+        transform:translateY(0px);
     }
-    70%{
-        transform:translateY(8px) rotate(-4deg);
-    }
-    85%{
-        transform:translateY(4px) rotate(-2deg);
+    75%{
+        transform:translateY(10px);
     }
 }
 </style>
@@ -69,7 +79,27 @@ body{
 <a href="https://docs.google.com/spreadsheets/d/1uSsfjXRx_9rpMK7FA9cZLes4q4ehXBG38V-QyeC6Xf4/edit?pli=1&gid=776864011#gid=776864011"
    target="_blank"
    class="spi-button">
-   🚨 SPI STATUS 2026 🚨
+
+<span>🚨</span>
+<span>&nbsp;</span>
+<span>S</span>
+<span>P</span>
+<span>I</span>
+<span>&nbsp;</span>
+<span>S</span>
+<span>T</span>
+<span>A</span>
+<span>T</span>
+<span>U</span>
+<span>S</span>
+<span>&nbsp;</span>
+<span>2</span>
+<span>0</span>
+<span>2</span>
+<span>6</span>
+<span>&nbsp;</span>
+<span>🚨</span>
+
 </a>
 
 </body>
