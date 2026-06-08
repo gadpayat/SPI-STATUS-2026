@@ -18,16 +18,13 @@ body{
 
 .spi-button{
     padding:15px 30px;
-    font-size:28px;
+    font-size:32px;
     font-weight:bold;
     color:#fcfceb;
     background:#0dbd04;
-    border:none;
     border-radius:15px;
-    cursor:pointer;
     text-decoration:none;
-    text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    box-shadow:0 0 20px rgba(0,0,0,.3);
     white-space:nowrap;
 }
 
@@ -35,41 +32,47 @@ body{
     transform:scale(1.05);
 }
 
-/* Each character */
+/* Individual letters */
 .spi-button span{
     display:inline-block;
-    animation:wave 1.5s ease-in-out infinite;
+    animation:wave 2.8s ease-in-out infinite;
+    transform-origin:center bottom;
 }
 
-/* Staggered delays create the flag effect */
-.spi-button span:nth-child(1){animation-delay:0.0s;}
-.spi-button span:nth-child(2){animation-delay:0.1s;}
-.spi-button span:nth-child(3){animation-delay:0.2s;}
-.spi-button span:nth-child(4){animation-delay:0.3s;}
-.spi-button span:nth-child(5){animation-delay:0.4s;}
-.spi-button span:nth-child(6){animation-delay:0.5s;}
-.spi-button span:nth-child(7){animation-delay:0.6s;}
-.spi-button span:nth-child(8){animation-delay:0.7s;}
-.spi-button span:nth-child(9){animation-delay:0.8s;}
-.spi-button span:nth-child(10){animation-delay:0.9s;}
-.spi-button span:nth-child(11){animation-delay:1.0s;}
-.spi-button span:nth-child(12){animation-delay:1.1s;}
-.spi-button span:nth-child(13){animation-delay:1.2s;}
-.spi-button span:nth-child(14){animation-delay:1.3s;}
-.spi-button span:nth-child(15){animation-delay:1.4s;}
+/* Sequential delays */
+.spi-button span:nth-child(1){animation-delay:0.00s;}
+.spi-button span:nth-child(2){animation-delay:0.08s;}
+.spi-button span:nth-child(3){animation-delay:0.16s;}
+.spi-button span:nth-child(4){animation-delay:0.24s;}
+.spi-button span:nth-child(5){animation-delay:0.32s;}
+.spi-button span:nth-child(6){animation-delay:0.40s;}
+.spi-button span:nth-child(7){animation-delay:0.48s;}
+.spi-button span:nth-child(8){animation-delay:0.56s;}
+.spi-button span:nth-child(9){animation-delay:0.64s;}
+.spi-button span:nth-child(10){animation-delay:0.72s;}
+.spi-button span:nth-child(11){animation-delay:0.80s;}
+.spi-button span:nth-child(12){animation-delay:0.88s;}
+.spi-button span:nth-child(13){animation-delay:0.96s;}
+.spi-button span:nth-child(14){animation-delay:1.04s;}
+.spi-button span:nth-child(15){animation-delay:1.12s;}
+.spi-button span:nth-child(16){animation-delay:1.20s;}
+.spi-button span:nth-child(17){animation-delay:1.28s;}
+.spi-button span:nth-child(18){animation-delay:1.36s;}
+.spi-button span:nth-child(19){animation-delay:1.44s;}
 
+/* Smooth flag wave */
 @keyframes wave{
     0%,100%{
-        transform:translateY(0px);
+        transform:translateY(0px) rotate(0deg);
     }
     25%{
-        transform:translateY(-20px);
+        transform:translateY(-20px) rotate(4deg);
     }
     50%{
-        transform:translateY(0px);
+        transform:translateY(0px) rotate(0deg);
     }
     75%{
-        transform:translateY(20px);
+        transform:translateY(20px) rotate(-4deg);
     }
 }
 </style>
