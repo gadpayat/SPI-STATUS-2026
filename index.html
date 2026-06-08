@@ -13,11 +13,12 @@ body{
     justify-content:center;
     align-items:center;
     background:#2355a3;
-    font-family:Rakkas, Rakkas;
+    font-family:Rakkas, serif;
 }
 
+/* Button */
 .spi-button{
-    padding:10px 10px;
+    padding:12px 25px;
     font-size:20px;
     font-weight:bold;
     color:#fcfceb;
@@ -28,31 +29,47 @@ body{
     text-decoration:none;
     text-align:center;
     box-shadow:0 0 20px rgba(0,0,0,0.3);
-    
-    /* Blinking Effect */
-    animation:blink 1.5s infinite;
-    
-    transition:transform 0.3s;
+
+    /* Wave Animation */
+    animation:wave 2s ease-in-out infinite;
+
+    transition:all 0.3s ease;
 }
 
+/* Hover Effect */
 .spi-button:hover{
     transform:scale(1.1);
 }
 
-@keyframes blink{
-    0%, 50%{
-        opacity:1;
+/* Wave Effect */
+@keyframes wave{
+    0%,100%{
+        transform:translateY(0px) rotate(0deg);
     }
-    51%, 100%{
-        opacity:0;
+    15%{
+        transform:translateY(-4px) rotate(2deg);
+    }
+    30%{
+        transform:translateY(-8px) rotate(4deg);
+    }
+    50%{
+        transform:translateY(0px) rotate(0deg);
+    }
+    70%{
+        transform:translateY(8px) rotate(-4deg);
+    }
+    85%{
+        transform:translateY(4px) rotate(-2deg);
     }
 }
 </style>
 </head>
 <body>
 
-<a href="https://docs.google.com/spreadsheets/d/1uSsfjXRx_9rpMK7FA9cZLes4q4ehXBG38V-QyeC6Xf4/edit?pli=1&gid=776864011#gid=776864011" target="_blank" class="spi-button">
-    🚨 SPI STATUS 2026 🚨
+<a href="https://docs.google.com/spreadsheets/d/1uSsfjXRx_9rpMK7FA9cZLes4q4ehXBG38V-QyeC6Xf4/edit?pli=1&gid=776864011#gid=776864011"
+   target="_blank"
+   class="spi-button">
+   🚨 SPI STATUS 2026 🚨
 </a>
 
 </body>
