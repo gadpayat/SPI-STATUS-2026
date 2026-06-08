@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPI STATUS 2026 Button</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:skyblue;
+    font-family:Arial, sans-serif;
+}
+
+.spi-button{
+    padding:25px 50px;
+    font-size:36px;
+    font-weight:bold;
+    color:white;
+    background:#0066cc;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    text-decoration:none;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    
+    /* Blinking Effect */
+    animation:blink 1s infinite;
+    
+    transition:transform 0.3s;
+}
+
+.spi-button:hover{
+    transform:scale(1.1);
+}
+
+@keyframes blink{
+    0%, 50%{
+        opacity:1;
+    }
+    51%, 100%{
+        opacity:0.3;
+    }
+}
+</style>
+</head>
+<body>
+
+<a href="https://your-link-here.com" target="_blank" class="spi-button">
+    SPI STATUS 2026
+</a>
+
+</body>
+</html>
