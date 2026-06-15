@@ -12,22 +12,134 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:#2355a3;
+    background:
+radial-gradient(circle at top,#1b3564,#081423);
     font-family:Rakkas, serif;
 }
 
 .spi-button{
-    padding:15px 30px;
+    position:relative;
+    padding:18px 38px;
     font-size:32px;
     font-weight:bold;
-    color:#fcfceb;
-    background:#0e1f36;
-    border-radius:15px;
+    color:#fffdf0;
     text-decoration:none;
     text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    border-radius:18px;
     white-space:nowrap;
     overflow:hidden;
+
+    /* Gold metallic gradient */
+    background:
+        linear-gradient(
+            180deg,
+            #fff8c7 0%,
+            #ffd700 12%,
+            #ffec8b 22%,
+            #c99800 38%,
+            #fff2a8 50%,
+            #b8860b 65%,
+            #ffd700 82%,
+            #fff7c0 100%
+        );
+
+    border:2px solid rgba(255,255,255,0.4);
+
+    /* Realistic 3D depth */
+    box-shadow:
+        inset 0 3px 6px rgba(255,255,255,0.8),
+        inset 0 -6px 10px rgba(120,80,0,0.5),
+        0 4px 0 #8b6508,
+        0 8px 18px rgba(0,0,0,0.45),
+        0 0 20px rgba(255,215,0,0.4);
+
+    transition:all .25s ease;
+}
+
+/* Glitter sparkle layer */
+.spi-button::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150%;
+    width:80%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.15),
+        rgba(255,255,255,.95),
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+    animation:goldShine 4s linear infinite;
+}
+
+/* Random glitter highlights */
+.spi-button::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+      radial-gradient(circle at 15% 30%, rgba(255,255,255,.9) 1px, transparent 3px),
+      radial-gradient(circle at 35% 70%, rgba(255,255,255,.8) 1px, transparent 3px),
+      radial-gradient(circle at 55% 20%, rgba(255,255,255,.9) 1px, transparent 3px),
+      radial-gradient(circle at 75% 60%, rgba(255,255,255,.7) 1px, transparent 3px),
+      radial-gradient(circle at 90% 30%, rgba(255,255,255,.9) 1px, transparent 3px);
+
+    animation:glitter 2s infinite alternate;
+    pointer-events:none;
+}
+
+.spi-button:hover{
+    transform:translateY(-3px) scale(1.05);
+
+    box-shadow:
+        inset 0 3px 8px rgba(255,255,255,.9),
+        inset 0 -8px 12px rgba(120,80,0,.5),
+        0 6px 0 #8b6508,
+        0 14px 28px rgba(0,0,0,.5),
+        0 0 30px rgba(255,215,0,.8);
+}
+
+.spi-button:active{
+    transform:translateY(3px);
+
+    box-shadow:
+        inset 0 3px 8px rgba(255,255,255,.7),
+        inset 0 -5px 8px rgba(120,80,0,.4),
+        0 2px 0 #8b6508,
+        0 4px 8px rgba(0,0,0,.4);
+}
+
+/* Keep text above shine layers */
+.spi-button span{
+    position:relative;
+    z-index:2;
+}
+
+/* Moving gold shine */
+@keyframes goldShine{
+    0%{
+        left:-150%;
+    }
+    100%{
+        left:200%;
+    }
+}
+
+/* Glitter twinkle */
+@keyframes glitter{
+    0%{
+        opacity:.3;
+    }
+    100%{
+        opacity:1;
+    }
 }
 
 .spi-button:hover{
