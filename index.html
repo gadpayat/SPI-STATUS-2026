@@ -1,71 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SPI STATUS 2026 Button</title>
-    
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-    
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
+rel="stylesheet">
+
+
 <style>
-    
+
+/* =========================================
+   BODY / MAIN CONTAINER
+========================================= */
+
 body{
     margin:0;
     height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     background:transparent;
+
     font-family:'Orbitron', sans-serif;
 }
 
+
+/* =========================================
+   BUTTON CONTAINER
+========================================= */
+
+.button-container{
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:28px;
+}
+
+
+/* =========================================
+   MAIN SPI BUTTON
+========================================= */
+
 .spi-button{
+
     position:relative;
+
+    display:block;
+
     padding:18px 38px;
+
     font-size:32px;
     font-weight:bold;
+
     color:#000000;
+
     text-decoration:none;
     text-align:center;
-    border-radius:18px;
-    white-space:nowrap;
-    overflow:hidden;
-    
-    /* Gold metallic gradient */
-    background: linear-gradient(
-    180deg,
-    #FFF8DC 0%,
-    #FFE97A 10%,
-    #FFD700 25%,
-    #FFC300 45%,
-    #E6B800 60%,
-    #FFD700 75%,
-    #FFF8DC 90%,
-    #B8860B 100%
-);
 
+    border-radius:18px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    /* Gold Metallic Gradient */
+    background:linear-gradient(
+        180deg,
+        #FFF8DC 0%,
+        #FFE97A 10%,
+        #FFD700 25%,
+        #FFC300 45%,
+        #E6B800 60%,
+        #FFD700 75%,
+        #FFF8DC 90%,
+        #B8860B 100%
+    );
 
     border:2px solid rgba(255,255,255,0.4);
 
-    /* Ultra realistic metallic gold depth */
+    /* Metallic Gold Depth */
     box-shadow:
-    inset 0 2px 2px rgba(255,255,255,.7),
-    inset 0 -3px 5px rgba(0,0,0,.25),
-    0 4px 0 #d4af37,
-    0 8px 20px rgba(0,0,0,.35),
-    0 0 20px rgba(255,215,0,.4);
+
+        inset 0 2px 2px rgba(255,255,255,.7),
+
+        inset 0 -3px 5px rgba(0,0,0,.25),
+
+        0 4px 0 #d4af37,
+
+        0 8px 20px rgba(0,0,0,.35),
+
+        0 0 20px rgba(255,215,0,.4);
 
     transition:all .25s ease;
 }
 
-/* Glitter sparkle layer */
+
+/* =========================================
+   MAIN BUTTON SHINE
+========================================= */
+
 .spi-button::before{
+
     content:"";
+
     position:absolute;
+
     top:0;
     left:-150%;
+
     width:80%;
     height:100%;
 
@@ -79,98 +135,171 @@ body{
     );
 
     transform:skewX(-25deg);
+
     animation:goldShine 4s linear infinite;
-}
 
-/* Random glitter highlights */
-.spi-button::after{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:
-      radial-gradient(circle at 10% 20%, rgba(255,255,255,1) 1px, transparent 3px),
-      radial-gradient(circle at 25% 70%, rgba(255,255,255,1) 1px, transparent 3px),
-      radial-gradient(circle at 40% 30%, rgba(255,255,255,1) 1px, transparent 3px),
-      radial-gradient(circle at 55% 80%, rgba(255,255,255,1) 1px, transparent 3px),
-      radial-gradient(circle at 70% 25%, rgba(255,255,255,1) 1px, transparent 3px),
-      radial-gradient(circle at 85% 60%, rgba(255,255,255,1) 1px, transparent 3px);
-
-    animation:glitter 1.5s infinite alternate;
     pointer-events:none;
 }
 
+
+/* =========================================
+   MAIN BUTTON GLITTER
+========================================= */
+
+.spi-button::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+      radial-gradient(
+          circle at 10% 20%,
+          rgba(255,255,255,1) 1px,
+          transparent 3px
+      ),
+
+      radial-gradient(
+          circle at 25% 70%,
+          rgba(255,255,255,1) 1px,
+          transparent 3px
+      ),
+
+      radial-gradient(
+          circle at 40% 30%,
+          rgba(255,255,255,1) 1px,
+          transparent 3px
+      ),
+
+      radial-gradient(
+          circle at 55% 80%,
+          rgba(255,255,255,1) 1px,
+          transparent 3px
+      ),
+
+      radial-gradient(
+          circle at 70% 25%,
+          rgba(255,255,255,1) 1px,
+          transparent 3px
+      ),
+
+      radial-gradient(
+          circle at 85% 60%,
+          rgba(255,255,255,1) 1px,
+          transparent 3px
+      );
+
+    animation:glitter 1.5s infinite alternate;
+
+    pointer-events:none;
+}
+
+
+/* =========================================
+   MAIN BUTTON HOVER
+========================================= */
+
 .spi-button:hover{
+
     transform:translateY(-3px) scale(1.05);
 
     box-shadow:
+
         inset 0 3px 8px rgba(255,255,255,.9),
+
         inset 0 -8px 12px rgba(120,80,0,.5),
+
         0 6px 0 #8b6508,
+
         0 14px 28px rgba(0,0,0,.5),
+
         0 0 30px rgba(255,215,0,.8);
 }
 
+
+/* =========================================
+   MAIN BUTTON ACTIVE
+========================================= */
+
 .spi-button:active{
+
     transform:translateY(3px);
 
     box-shadow:
+
         inset 0 3px 8px rgba(255,255,255,.7),
+
         inset 0 -5px 8px rgba(120,80,0,.4),
+
         0 2px 0 #8b6508,
+
         0 4px 8px rgba(0,0,0,.4);
 }
 
-/* Keep text above shine layers */
+
+/* =========================================
+   KEEP MAIN TEXT ABOVE EFFECTS
+========================================= */
+
 .spi-button span{
+
     position:relative;
+
     z-index:2;
 }
 
-/* Moving gold shine */
+
+/* =========================================
+   GOLD SHINE ANIMATION
+========================================= */
+
 @keyframes goldShine{
+
     0%{
         left:-150%;
     }
+
     100%{
         left:200%;
     }
 }
 
-/* Glitter twinkle */
+
+/* =========================================
+   GLITTER ANIMATION
+========================================= */
+
 @keyframes glitter{
+
     0%{
         opacity:.3;
     }
+
     100%{
         opacity:1;
     }
 }
 
-@keyframes goldFlow{
-    0%{
-        background-position:0% 50%;
-    }
-    50%{
-        background-position:100% 50%;
-    }
-    100%{
-        background-position:0% 50%;
-    }
-}
 
-    .spi-button:hover{
-    transform:scale(1.05);
-}
+/* =========================================
+   INDIVIDUAL LETTER WAVE
+========================================= */
 
-/* Individual letters */
 .spi-button span{
+
     display:inline-block;
+
     transform-origin:center bottom;
+
     animation:wave 3s linear infinite;
 }
 
+
 /* Sequential delays */
+
 .spi-button span:nth-child(1){animation-delay:0.00s;}
 .spi-button span:nth-child(2){animation-delay:0.03s;}
 .spi-button span:nth-child(3){animation-delay:0.06s;}
@@ -191,10 +320,11 @@ body{
 .spi-button span:nth-child(18){animation-delay:0.51s;}
 .spi-button span:nth-child(19){animation-delay:0.54s;}
 
-/*
-   First 33% = Fast Wave
-   Remaining 67% = Pause
-*/
+
+/* =========================================
+   WAVE ANIMATION
+========================================= */
+
 @keyframes wave{
 
     0%{
@@ -217,40 +347,329 @@ body{
         transform:translateY(0px) rotate(0deg);
     }
 
-    /* Pause */
     34%,100%{
         transform:translateY(0px) rotate(0deg);
     }
 }
+
+
+/* ==================================================
+   UNIFIED SP DIRECTORY BUTTON
+   SAME GOLD COLOR AS MAIN BUTTON
+================================================== */
+
+.directory-button{
+
+    position:relative;
+
+    display:block;
+
+    width:390px;
+
+    padding:14px 30px;
+
+    font-size:21px;
+
+    font-weight:bold;
+
+    color:#000000;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    border-radius:16px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    /* SAME GOLD METALLIC GRADIENT */
+
+    background:linear-gradient(
+        180deg,
+        #FFF8DC 0%,
+        #FFE97A 10%,
+        #FFD700 25%,
+        #FFC300 45%,
+        #E6B800 60%,
+        #FFD700 75%,
+        #FFF8DC 90%,
+        #B8860B 100%
+    );
+
+    border:2px solid rgba(255,255,255,0.4);
+
+    /* Metallic Depth */
+
+    box-shadow:
+
+        inset 0 2px 2px rgba(255,255,255,.7),
+
+        inset 0 -3px 5px rgba(0,0,0,.25),
+
+        0 4px 0 #d4af37,
+
+        0 8px 18px rgba(0,0,0,.35),
+
+        0 0 18px rgba(255,215,0,.35);
+
+    transition:all .25s ease;
+
+    z-index:1;
+}
+
+
+/* =========================================
+   RIPPLE EFFECT
+========================================= */
+
+.directory-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:20px;
+    height:20px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:3px solid rgba(255,255,255,.85);
+
+    box-shadow:
+
+        0 0 10px rgba(255,255,255,.8),
+
+        0 0 20px rgba(255,215,0,.7);
+
+    animation:ripple 2.5s ease-out infinite;
+
+    pointer-events:none;
+}
+
+
+/* =========================================
+   SECOND RIPPLE
+========================================= */
+
+.directory-button::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:20px;
+    height:20px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.7);
+
+    animation:ripple 2.5s ease-out infinite;
+
+    animation-delay:1.25s;
+
+    pointer-events:none;
+}
+
+
+/* =========================================
+   RIPPLE ANIMATION
+========================================= */
+
+@keyframes ripple{
+
+    0%{
+
+        width:20px;
+        height:20px;
+
+        opacity:.9;
+
+    }
+
+    70%{
+
+        width:420px;
+        height:120px;
+
+        opacity:.25;
+
+    }
+
+    100%{
+
+        width:500px;
+        height:150px;
+
+        opacity:0;
+
+    }
+}
+
+
+/* =========================================
+   DIRECTORY BUTTON HOVER
+========================================= */
+
+.directory-button:hover{
+
+    transform:translateY(-3px) scale(1.04);
+
+    box-shadow:
+
+        inset 0 3px 8px rgba(255,255,255,.9),
+
+        inset 0 -8px 12px rgba(120,80,0,.5),
+
+        0 6px 0 #8b6508,
+
+        0 14px 28px rgba(0,0,0,.5),
+
+        0 0 30px rgba(255,215,0,.8);
+}
+
+
+/* =========================================
+   DIRECTORY BUTTON ACTIVE
+========================================= */
+
+.directory-button:active{
+
+    transform:translateY(3px);
+
+    box-shadow:
+
+        inset 0 3px 8px rgba(255,255,255,.7),
+
+        inset 0 -5px 8px rgba(120,80,0,.4),
+
+        0 2px 0 #8b6508,
+
+        0 4px 8px rgba(0,0,0,.4);
+}
+
+
+/* =========================================
+   DIRECTORY TEXT
+========================================= */
+
+.directory-button span{
+
+    position:relative;
+
+    z-index:5;
+
+    display:inline-block;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media(max-width:600px){
+
+    .spi-button{
+
+        padding:14px 22px;
+
+        font-size:24px;
+    }
+
+    .directory-button{
+
+        width:280px;
+
+        padding:12px 20px;
+
+        font-size:17px;
+    }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
 
-<a href="https://docs.google.com/spreadsheets/d/1uSsfjXRx_9rpMK7FA9cZLes4q4ehXBG38V-QyeC6Xf4/edit?pli=1&gid=776864011#gid=776864011"
-   target="_blank"
-   class="spi-button">
 
-<span>🚨</span>
-<span>&nbsp;</span>
-<span>S</span>
-<span>P</span>
-<span>I</span>
-<span>&nbsp;</span>
-<span>S</span>
-<span>T</span>
-<span>A</span>
-<span>T</span>
-<span>U</span>
-<span>S</span>
-<span>&nbsp;</span>
-<span>2</span>
-<span>0</span>
-<span>2</span>
-<span>6</span>
-<span>&nbsp;</span>
-<span>🚨</span>
+<div class="button-container">
 
-</a>
+
+    <!-- =====================================
+         MAIN SPI STATUS BUTTON
+    ====================================== -->
+
+    <a
+        href="https://docs.google.com/spreadsheets/d/1uSsfjXRx_9rpMK7FA9cZLes4q4ehXBG38V-QyeC6Xf4/edit?pli=1&gid=776864011#gid=776864011"
+
+        target="_blank"
+
+        class="spi-button"
+    >
+
+        <span>🚨</span>
+        <span>&nbsp;</span>
+
+        <span>S</span>
+        <span>P</span>
+        <span>I</span>
+
+        <span>&nbsp;</span>
+
+        <span>S</span>
+        <span>T</span>
+        <span>A</span>
+        <span>T</span>
+        <span>U</span>
+        <span>S</span>
+
+        <span>&nbsp;</span>
+
+        <span>2</span>
+        <span>0</span>
+        <span>2</span>
+        <span>6</span>
+
+        <span>&nbsp;</span>
+
+        <span>🚨</span>
+
+    </a>
+
+
+    <!-- =====================================
+         UNIFIED SP DIRECTORY BUTTON
+    ====================================== -->
+
+    <a
+        href="https://docs.google.com/spreadsheets/d/1wDY7Pgrq_CyKTO-tF2oyajsGka8f3gHKD_UPRnUlIYA/edit?usp=sharing"
+        target="_blank"
+        class="directory-button"
+    >
+
+        <span>🌐 &nbsp; Unified SP Directory</span>
+
+    </a>
+
+
+</div>
+
 
 </body>
+
 </html>
